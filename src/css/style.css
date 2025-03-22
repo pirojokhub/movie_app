@@ -1,0 +1,299 @@
+/* Общий контейнер */
+.app-container {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.app-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Список фильмов */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Карточка фильма */
+.movie-card {
+  background: #2c2c2c;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 300px;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+/* Обложка фильма */
+.movie-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+/* Контент внутри карточки */
+.movie-content {
+  padding: 10px;
+}
+
+/* Название фильма */
+.movie-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+/* Описание */
+.movie-description {
+  font-size: 14px;
+  color: #ccc;
+  opacity: 0.9;
+  margin-bottom: 12px;
+}
+
+/* Информация о фильме */
+.movie-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Жанр */
+.movie-genre {
+  color: #bbb;
+  font-style: italic;
+}
+
+/* Рейтинг */
+.movie-rating {
+  color: #f4c542;
+  font-weight: bold;
+}
+
+.favorite-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #ff9800;
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.favorite-btn:hover {
+  background-color: #e68900;
+}
+
+/* Карточка фильма */
+.movie-card {
+  background: #2c2c2c;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+/* Изображение фильма */
+.movie-image {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Информация о фильме */
+.movie-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Кнопка избранного */
+.favorite-btn {
+  background: #ffcc00;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.favorite-btn:hover {
+  background: #ffdb4d;
+}
+
+/* Контейнер для лайков */
+.like-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* Кнопки лайка и дизлайка */
+.like-btn,
+.dislike-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: transform 0.2s;
+}
+
+.like-btn:hover,
+.dislike-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Счетчик лайков */
+.like-count {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffcc00;
+}
+/* Контейнер карточки фильма */
+.movie-card {
+  background: #2c2c2c;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Контент внутри карточки */
+.movie-content {
+  padding: 10px;
+  width: 100%;
+}
+
+/* Контейнер для кнопок */
+.like-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+/* Стили кнопки избранного */
+.favorite-btn {
+  background: #ffcc00;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.favorite-btn:hover {
+  background: #ffdb4d;
+}
+
+/* Кнопки лайков и дизлайков */
+.like-btn,
+.dislike-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.like-btn:hover,
+.dislike-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Счетчик лайков */
+.like-count {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+/* Контейнер фильтра */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Метка фильтра */
+.filter-label {
+  font-size: 16px;
+  color: #ffcc00;
+}
+
+/* Выпадающий список */
+.filter-select {
+  background-color: #2c2c2c;
+  color: white;
+  border: 1px solid #ffcc00;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filter-select:hover {
+  background-color: #3a3a3a;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #ffdb4d;
+}
