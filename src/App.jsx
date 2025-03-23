@@ -16,33 +16,41 @@ function App() {
   }, []);
 
   const toggleFavorite = useCallback((movie) => {
-    setFavorites((prevFavorites) => {
-      if (prevFavorites.includes(movie)) {
-        return prevFavorites.filter((id) => id !== movie.id);
-      } else {
-        return [...prevFavorites, movie];
-      }
-    });
+    setFavorites(
+      (prevFavorites) =>
+        prevFavorites.some((fav) => fav.id === movie.id)
+          ? prevFavorites.filter((fav) => fav.id !== movie.id) // Удаляем, если уже есть
+          : [...prevFavorites, movie] // Добавляем, если нет
+    );
   }, []);
+  // const toggleFavorite = (movie) => {
+  //   setFavorites(
+  //     (prevFavorites) =>
+  //       prevFavorites.some((fav) => fav.id === movie.id)
+  //         ? prevFavorites.filter((fav) => fav.id !== movie.id) // Удаляем, если уже есть
+  //         : [...prevFavorites, movie] // Добавляем, если нет
+  //   );
+  // };
 
   // console.log(favorites);
+  console.log(dislikes);
   const handleLikes = (movie) => {
     setLikes((prevLikes) => {
-      if (prevLikes[movie.id]) return prevLikes;
-
+      setDislikes((prevDislikes) => ({ ...prevDislikes, [movie.id]: 0 }));
       return {
         ...prevLikes,
-        [movie.id]: 1,
+        [movie.id]: prevLikes[movie.id] ? 0 : 1,
       };
     });
   };
 
   const handleDislikes = (movie) => {
     setDislikes((prevDislikes) => {
-      if (prevDislikes[movie.id]) return prevDislikes;
+      setLikes((prevLikes) => ({ ...prevLikes, [movie.id]: 0 }));
+
       return {
         ...prevDislikes,
-        [movie.id]: 1,
+        [movie.id]: prevDislikes[movie.id] ? 0 : 1,
       };
     });
   };

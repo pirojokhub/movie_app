@@ -22,7 +22,7 @@ function MovieItem({
         <h2 className="movie-title">{title}</h2>
         <p className="movie-description">{description}</p>
         <div className="movie-info">
-          <span className="movie-genre">Жанр: {genre}</span>
+          <span className="movie-genre">Жан: {genre}</span>
           <span className="movie-rating">Рейтинг: {rating}</span>
         </div>
       </div>

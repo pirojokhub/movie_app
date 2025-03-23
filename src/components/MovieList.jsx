@@ -27,8 +27,8 @@ function MovieList({
             genre={movie.genre}
             rating={movie.rating}
             image={movie.image}
-            toggleFavorite={() => toggleFavorite(movie.id)}
-            isFavorites={favorites.includes(movie.id)}
+            toggleFavorite={() => toggleFavorite(movie)}
+            isFavorites={favorites.some((fav) => fav.id === movie.id)}
             toggleLikes={() => toggleLikes(movie)}
             likes={likes}
             toggleDislikes={() => toggleDislikes(movie)}
